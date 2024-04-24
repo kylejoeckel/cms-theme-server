@@ -42,7 +42,6 @@ Deployment
 
 Deploy the application to AWS:
 
-bashCopy code
 
 `serverless deploy`
 
@@ -53,34 +52,29 @@ Usage
 
 ### Create Theme
 
-bashCopy code
 
-`curl -X POST https://<api-gateway-url>/themes -d '{"groupName":"default", "theme": {"palette": {"primary": {"main": "#FFD700"}}}}'`
+```curl -X POST https://<api-gateway-url>/themes -d '{"groupName":"default", "theme": {"palette": {"primary": {"main": "#FFD700"}}}}'```
 
 ### Retrieve Theme
 
-bashCopy code
 
-`curl https://<api-gateway-url>/themes/{id}`
+```curl https://<api-gateway-url>/themes/{id}```
 
 ### Update Theme
 
-bashCopy code
 
-`curl -X PUT https://<api-gateway-url>/themes/{id} -d '{"theme": {"palette": {"primary": {"main": "#000000"}}}}'`
+```curl -X PUT https://<api-gateway-url>/themes/{id} -d '{"theme": {"palette": {"primary": {"main": "#000000"}}}}'```
 
 ### Delete Theme
 
-bashCopy code
 
-`curl -X DELETE https://<api-gateway-url>/themes/{id}`
+```curl -X DELETE https://<api-gateway-url>/themes/{id}```
 
 Local Development
 -----------------
 
 To run the application locally with Serverless Offline and DynamoDB Local:
 
-bashCopy code
 
 `serverless offline start`
 
