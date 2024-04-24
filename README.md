@@ -1,6 +1,31 @@
-# CMS Theme Server  The CMS Theme Server is a serverless application designed to manage themes for a content management system. It provides API endpoints to create, retrieve, update, and delete themes, utilizing AWS Lambda and DynamoDB for efficient and scalable operations.  
-## Features  - Create, read, update, and delete themes. - Store themes with unique identifiers and group associations. - Search for themes by ID or group name.  
-## Requirements  - Node.js - Serverless Framework - AWS CLI - Python 3.10 - AWS account  ## Setup  ### Install Dependencies  Install the Serverless Framework globally and other dependencies:  ```bash npm install -g serverless npm install serverless-offline serverless-dynamodb-local`
+# CMS Theme Server
+
+The CMS Theme Server is a serverless application designed to manage themes for a content management system. It provides API endpoints to create, retrieve, update, and delete themes, utilizing AWS Lambda and DynamoDB for efficient and scalable operations.
+
+## Features
+
+- Create, read, update, and delete themes.
+- Store themes with unique identifiers and group associations.
+- Search for themes by ID or group name.
+
+## Requirements
+
+- Node.js
+- Serverless Framework
+- AWS CLI
+- Python 3.10
+- AWS account
+
+## Setup
+
+### Install Dependencies
+
+Install the Serverless Framework globally and other dependencies:
+
+```bash
+npm install -g serverless
+npm install serverless-offline serverless-dynamodb-local
+```
 
 ### AWS Configuration
 
