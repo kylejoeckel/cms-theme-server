@@ -1,6 +1,31 @@
-# CMS Theme Server  The CMS Theme Server is a serverless application designed to manage themes for a content management system. It provides API endpoints to create, retrieve, update, and delete themes, utilizing AWS Lambda and DynamoDB for efficient and scalable operations.  
-## Features  - Create, read, update, and delete themes. - Store themes with unique identifiers and group associations. - Search for themes by ID or group name.  
-## Requirements  - Node.js - Serverless Framework - AWS CLI - Python 3.10 - AWS account  ## Setup  ### Install Dependencies  Install the Serverless Framework globally and other dependencies:  ```bash npm install -g serverless npm install serverless-offline serverless-dynamodb-local`
+# CMS Theme Server
+
+The CMS Theme Server is a serverless application designed to manage themes for a content management system. It provides API endpoints to create, retrieve, update, and delete themes, utilizing AWS Lambda and DynamoDB for efficient and scalable operations.
+
+## Features
+
+- Create, read, update, and delete themes.
+- Store themes with unique identifiers and group associations.
+- Search for themes by ID or group name.
+
+## Requirements
+
+- Node.js
+- Serverless Framework
+- AWS CLI
+- Python 3.10
+- AWS account
+
+## Setup
+
+### Install Dependencies
+
+Install the Serverless Framework globally and other dependencies:
+
+```bash
+npm install -g serverless
+npm install serverless-offline serverless-dynamodb-local
+```
 
 ### AWS Configuration
 
@@ -17,7 +42,6 @@ Deployment
 
 Deploy the application to AWS:
 
-bashCopy code
 
 `serverless deploy`
 
@@ -28,34 +52,29 @@ Usage
 
 ### Create Theme
 
-bashCopy code
 
-`curl -X POST https://<api-gateway-url>/themes -d '{"groupName":"default", "theme": {"palette": {"primary": {"main": "#FFD700"}}}}'`
+```curl -X POST https://<api-gateway-url>/themes -d '{"groupName":"default", "theme": {"palette": {"primary": {"main": "#FFD700"}}}}'```
 
 ### Retrieve Theme
 
-bashCopy code
 
-`curl https://<api-gateway-url>/themes/{id}`
+```curl https://<api-gateway-url>/themes/{id}```
 
 ### Update Theme
 
-bashCopy code
 
-`curl -X PUT https://<api-gateway-url>/themes/{id} -d '{"theme": {"palette": {"primary": {"main": "#000000"}}}}'`
+```curl -X PUT https://<api-gateway-url>/themes/{id} -d '{"theme": {"palette": {"primary": {"main": "#000000"}}}}'```
 
 ### Delete Theme
 
-bashCopy code
 
-`curl -X DELETE https://<api-gateway-url>/themes/{id}`
+```curl -X DELETE https://<api-gateway-url>/themes/{id}```
 
 Local Development
 -----------------
 
 To run the application locally with Serverless Offline and DynamoDB Local:
 
-bashCopy code
 
 `serverless offline start`
 
