@@ -80,7 +80,7 @@ default_theme = {
                 }
             },
             "defaultProps": {
-                "disableRipple": true
+                "disableRipple": True
             }
         }
     }
